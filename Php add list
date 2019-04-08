@@ -1,39 +1,159 @@
 <!doctype html>
 <html lang = "us-en">
-<title>On line shopping store with cart</title>
+<title>Php add list</title>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
 
   <link rel="stylesheet" href="w3.css">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-
-<style>
-h1{
+ <style>
+ h1{
 font-family:Schadow BT;
 }
-
+ 
  hr{
 border-color:blue;
 	box-shadow: 5px 2px 10px blue;
 }
 
-</style>
+#l1{
+font-family:Schadow BT;
+font-size:18px;
+color:green;
+} 
 
-</head>
+#l2{
+font-family:Schadow BT;
+font-size:20px;
+
+} 
+
+table{
+border:none;
 
 
-<body>
-<div class = "w3-container">
+}
 
-<h1>On Line Shopping Store</h1>
+th{
+border-right:1px solid green;
+border-bottom:1px solid green;
+padding:15px;
+font-family:Schadow BT;
+font-size:20px;
+color:brown;
+}
+
+th,td{
+font-family:Schadow BT;
+font-size:20px;
+padding:15px;
+}
+
+td{
+text-align:left;
+border-bottom:1px solid green;
+}
+
+ 
+ .w3-input{
+    width:20%;
+	font-family:Schadow BT;
+	    transition:all 0.5s ease;
+		border:none;
+		border-bottom:1px solid green;
+}   
+  
+ .w3-input:hover{
+    width:100%;
+}
+ 
+ .w3-btn{
+ 	font-family:Schadow BT;
+	font-size:18px;
+ }
+ 
+ .b1{
+ border:none;
+ background-color:white;
+ 
+ }
+ </style>
+ </head>
+ 
+ <vody>
+ <div class = "w3-container">
+ 
+ <h1>To Do list</h1>
 <hr>
-// Publised by Prabeer Nandi    
-</div>
-</body>
-</html>
+<br>
+<label id = "l1">In This you can add, marked or delete the items</label><br><br>
+<label id = "l2">Enter items to add : </label>&nbsp;&nbsp;&nbsp;
+
+<form name = "form1">
+ <input class = "w3-input" name = "addItems"  placeholder = "Enter Items" id = "t1" ><br>
+ <input type = "button" class = "w3-btn w3-card-4" name = "addButton" value = "Add Items" onclick = "myadd()" ><br><br>
+ </form>
+ <hr>
+ 
+ <table name = "table1" id = "t2">
+ <tr>
+ <th>List</th>
+ <th>Checked</th>
+ <th>action</th>
+ </tr>
+ 
+ <tr id = "table1">
+ <td></tr>
+ </tr>
+ </table>
+ </div>
+ 
+ <script>
+ function myadd()
+ 
+ {
+ var y = document.getElementById("t1").value;
+  var row = document.getElementById("t2");
+  var table3 = row.insertRow(1);
+  var x = table3.insertCell(0);
+  x.innerHTML = y;
+ 
+ 
+ var  z = table3.insertCell(1);	
+ var newElem = document.createElement("input");
+ newElem.setAttribute("type", "checkbox");
+ newElem.setAttribute("value", "delete" );
+ newElem.setAttribute("name", "delete" );
+ z.appendChild(newElem);
+ 
+ 
+ var b = table3.insertCell(2);
+ var newElem1 = document.createElement("input");
+ newElem1.setAttribute("type", "button");
+ newElem1.setAttribute("value", "x");
+ newElem1.setAttribute("class", "b1");
+ newElem1.setAttribute("onclick", "del()");
+ b.appendChild(newElem1);
+ 
+ }
+ </script>
+ 
+ <script>
+$(document).on("click", ".b1", function(){
+
+if(window.confirm("sure to delete")){
+$(this).closest("tr").remove();
+}
+
+});
+ 
+ 
+ </script>
+ 
+ 
+ </body>
+ </html>
