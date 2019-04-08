@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang = "us-en">
+<title>On line shopping store with cart</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="w3.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+<style>
+h1{
+font-family:Schadow BT;
+}
+
+ hr{
+border-color:blue;
+	box-shadow: 5px 2px 10px blue;
+}
+
+</style>
+
+</head>
+
+
+<body>
+<div class = "w3-container">
+
+<h1>On Line Shopping Store</h1>
+<hr>
+// Publised by Prabeer Nandi    
+</div>
+</body>
+</html>
